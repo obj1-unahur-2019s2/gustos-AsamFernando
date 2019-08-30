@@ -3,6 +3,7 @@ object rojo { method esFuerte() { return true } }
 object verde { method esFuerte(){ return true } }  // completar
 object celeste { method esFuerte() { return false } }  // completar
 object pardo { method esFuerte() { return false } }  // completar
+object naranja { method esFuerte() {return true } }
 
 /* materiales */
 object lino { method brilla() { return false } }
@@ -57,7 +58,32 @@ object biblioteca {
 	method peso() { return 8000 }
 }
 
+object arito {
+	method color() { return celeste }
+	method material() { return cobre }
+	method peso() { return 180 }
+}
 
+object banquito {
+	var colorDefault=naranja
+	method material() { return madera }
+	method peso() { return 1700 }
+	method color() { return colorDefault }
+	method color(colorNuevo) { 
+		colorDefault=colorNuevo
+	}
+}
+
+object cajita {
+	var pesoCaja=400
+	method color() { return rojo }
+	method material() { return cobre }
+	method peso() { return pesoCaja}
+	method peso(objeto) {
+		pesoCaja=400
+		pesoCaja+=objeto.peso()
+	}
+}
 
 
 

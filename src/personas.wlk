@@ -1,4 +1,5 @@
 import objetos.*
+import personas.*
 
 object estefania {
 	method leGusta(objeto) { return objeto.color().esFuerte() }
